@@ -18,7 +18,7 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/css/style.css"/>
     <title>Work Day Scheduler</title>
   </head>
 
@@ -29,10 +29,56 @@
       <p id="currentDay" class="lead"></p>
     </header>
     <div class="container">
-      <!-- Timeblocks go here -->
+      <div id="9-am" class="time-block row">
+        <div id="hour-column" class="hour col-2">9 am</div>
+        <textarea id="text-area" class="description col-8"></textarea>
+        <button class="saveBtn col-2"></button>
+      </div>
+      <div id="10-am" class="time-block row">
+        <div id="hour-column" class="hour col-2">10 am</div>
+        <textarea id="text-area" class="description col-8"></textarea>
+        <button class="saveBtn col-2"></button>
+      </div>
+      <div id="11-am" class="time-block row">
+        <div id="hour-column" class="hour col-2">11 am</div>
+        <textarea id="text-area" class="description col-8"></textarea>
+        <button class="saveBtn col-2"></button>
+      </div>
+      <div id="12-am" class="time-block row">
+        <div id="hour-column" class="hour col-2">12 pm</div>
+        <textarea id="text-area" class="description col-8"></textarea>
+        <button class="saveBtn col-2"></button>
+      </div>
+      <div id="1-pm" class="time-block row">
+        <div id="hour-column" class="hour col-2">1 pm</div>
+        <textarea id="text-area" class="description col-8"></textarea>
+        <button class="saveBtn col-2"></button>
+      </div>
+      <div id="2-pm" class="time-block row">
+        <div id="hour-column" class="hour col-2">2 pm</div>
+        <textarea id="text-area" class="description col-8"></textarea>
+        <button class="saveBtn col-2"></button>
+      </div>
+      <div id="1-pm" class="time-block row">
+        <div id="hour-column" class="hour col-2">3 pm</div>
+        <textarea id="text-area" class="description col-8"></textarea>
+        <button class="saveBtn col-2"></button>
+      </div>
+      <div id="1-pm" class="time-block row">
+        <div id="hour-column" class="hour col-2">4 pm</div>
+        <textarea id="text-area" class="description col-8"></textarea>
+        <button class="saveBtn col-2"></button>
+      </div>
+      <div id="1-pm" class="time-block row">
+        <div id="hour-column" class="hour col-2">5 pm</div>
+        <textarea id="text-area" class="description col-8"></textarea>
+        <button class="saveBtn col-2"></button>
+      </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <!-- <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script> -->
+    <script src="assets/js/script.js"></script>
   </body>
 </html>
