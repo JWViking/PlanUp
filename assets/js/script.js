@@ -3,7 +3,7 @@ var hourColumn = document.getElementById("hour-column").innerHTML;
 var saveBtn = document.getElementById("saveBtn");
 
 //local storage array
-var storage = [];
+var schedule = [];
 
 //Display current date and time
 var formatter = Intl.DateTimeFormat("en-US", {month:"long", day:"numeric",year:"numeric", hour:"numeric",minute:"numeric",second:"numeric", timeZoneName:"short"});
@@ -55,13 +55,15 @@ currentTimeDisplay();
 
 
 //get value of text areas from local storage and display them on the page.
-var displayStorage = localStorage.getItem(storage);
-console.log(storage);
+var displayStorage = localStorage.getItem(schedule);
+console.log(schedule);
 
 
 
 //If a save button is clicked, the value of the text area is saved to local storage.
 var onClick = function (event) {
+    // prevent window from reloading
+    event.preventDefault();
     //find value of clicked target if the target is a button
     if(event.target.nodeName === 'BUTTON') {
         var buttonId = event.target.id;
@@ -78,15 +80,19 @@ var onClick = function (event) {
         console.log(textareaId);
 
         //get text value of textareaId
-        var textareaValue = document.getElementById('textareaId').innerHTML;
+        var textareaValue = document.getElementById('textareaId').value; //This isn't working. I don't know why.
         console.log(textareaValue);
 
         //save text from textarea to local storage
+        schedule = JSON.parse(localStorage.getItem('schedule')) || [];
+        schedule.push({name: num, text: textareaValue});
+        localStorage.setItem('schedule', JSON.stringify(schedule));
+        console.log(schedule);
         }
     };
 
     // console.log(this);
-    //set into local storage (9,10, etc.) Get ID of parent div to use for local storage calls (9,10, etc.)
+    //set into local storage (9,10, etc.)
     // localStorage.setItem(text[i], )
 
 
