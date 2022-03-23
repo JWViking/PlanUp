@@ -65,12 +65,20 @@ var onClick = function (event) {
         console.log(buttonId);
 
         //get text value of sibling
-        var getButtonSibling = buttonId.previousSibling.innerHTML;
-        console.log(getButtonSibling);
+        var splitButtonId = buttonId.split('-');
+        console.log(splitButtonId);
+
+        //concantenate hour + and destructured 2nd value of array
+        var [save, num] = splitButtonId;
+        console.log(num);
+        textareaId = 'save-' + num;
+        console.log(textareaId);
+
+        //get text value of textareaId
+        var textareaValue = document.getElementById(textareaId).value;
+        console.log(textareaValue);
         }
     };
-      
-    //text value of sibling
 
     // console.log(this);
     //set into local storage (9,10, etc.) Get ID of parent div to use for local storage calls (9,10, etc.)
