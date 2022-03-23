@@ -51,9 +51,12 @@ var currentTimeDisplay = function (compareHour) {
 
 currentTimeDisplay();
 
+//create function to take text typed into textarea and set it as the innerhtml value in the textarea element
+
+
 //get value of text areas from local storage and display them on the page.
-// Storage.getItem(storage);
-// console.log(storage);
+var displayStorage = localStorage.getItem(storage);
+console.log(storage);
 
 
 
@@ -71,12 +74,14 @@ var onClick = function (event) {
         //concantenate hour + and destructured 2nd value of array
         var [save, num] = splitButtonId;
         console.log(num);
-        textareaId = 'save-' + num;
+        textareaId = 'hour-' + num;
         console.log(textareaId);
 
         //get text value of textareaId
-        var textareaValue = document.getElementById(textareaId).value;
+        var textareaValue = document.getElementById('textareaId').innerHTML;
         console.log(textareaValue);
+
+        //save text from textarea to local storage
         }
     };
 
